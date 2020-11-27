@@ -9,9 +9,8 @@ function Row({Title,fetchApi,isLarge}) {
     useEffect(()=>{
         async function fetchMovies(){
             const req=await axios.get(fetchApi);
-            setMovies(req.data.results);
-            
-            return req;
+            setMovies(req.data.results); 
+            //return req;
         }
         fetchMovies();
     },[fetchApi]);
