@@ -78,7 +78,7 @@ function App() {
         openModal={openModal}
       />
       <p style={{ marginTop: "1rem", textAlign: "center" }}>
-        Design and Developer by{" "}
+        Design and Developed by{" "}
         <a href="https://mustafaahere.web.app">mustafahere</a>
       </p>
     </div>
