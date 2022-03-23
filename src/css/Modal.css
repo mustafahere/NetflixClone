@@ -1,0 +1,57 @@
+@media only screen and (max-width: 768px) {
+  .modal-imgDiv {
+    height: 200px !important;
+  }
+}
+
+.modal-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-imgDiv {
+  display: flex;
+  justify-content: flex-end;
+  /* padding: 10px; */
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+
+.closeIcon {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.modal-info {
+  display: flex;
+  padding: 20px;
+}
+
+.modal-title {
+  font-size: 50px;
+  font-weight: 900;
+  margin-top: -1rem;
+}
+
+.modal-adult {
+  margin-left: 1rem;
+  padding: 0.4rem;
+  border: 1px solid white;
+  font-size: 13px;
+}
+
+.modal-tag {
+  margin-top: -2.5rem;
+  font-size: 18px;
+}
+
+.modal-overview {
+  font-size: 15px;
+}
+
+.modal-genres {
+  font-size: 13px;
+}

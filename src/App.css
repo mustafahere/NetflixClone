@@ -1,4 +1,17 @@
-*{
-  background-color: black;
-  color:white;
+* {
+  background-color: #141414;
+  color: white;
+  /* padding: 0.5rem; */
+}
+
+@media only screen and (max-width: 768px) {
+  .ReactModal__Content {
+    height: 400x;
+    width: 90%;
+    overflow-y: auto;
+  }
+}
+
+.ReactModal__Content {
+  padding: 0 !important;
 }

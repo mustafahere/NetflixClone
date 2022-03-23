@@ -1,0 +1,12 @@
+@media only screen and (max-width: 768px) {
+  .banner-img {
+    height: auto !important;
+  }
+}
+
+.banner-img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  opacity: 0.4;
+}

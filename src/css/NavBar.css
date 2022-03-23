@@ -1,0 +1,61 @@
+@media only screen and (max-width: 768px) {
+  .navbar-main {
+    padding: 20px !important;
+  }
+  .nav-left p {
+    display: none;
+  }
+}
+
+.navbar-main {
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background: transparent;
+  z-index: 5;
+  left: 0;
+  right: 0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+}
+
+.nav-left img {
+  margin-right: 20px;
+  background: transparent;
+}
+
+.nav-left p {
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 300;
+  background: transparent;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+  background-color: transparent !important;
+}
+
+.nav-right svg {
+  cursor: pointer;
+  background-color: transparent !important;
+}
+
+.active {
+  font-weight: bold !important;
+}
+
+.logo {
+  width: 95px;
+  height: 30px;
+}

@@ -1,19 +1,82 @@
-import logo from './logo.svg';
-import './App.css';
-import Row from './components/Row';
-import Api from './config/api';
+import { useState } from "react";
+import "./App.css";
+import Banner from "./components/Banner";
+import ModalComponent from "./components/Modal";
+import NavBar from "./components/NavBar";
+import Row from "./components/Row";
+import { requests } from "./config/api";
 
 function App() {
+  const [isModal, setIsModal] = useState(false);
+  const [modalId, setModalId] = useState(null);
+
+  const openModal = (id) => {
+    setModalId(id);
+    setIsModal(true);
+  };
+
+  const closeModal = () => {
+    setModalId(null);
+    setIsModal(false);
+  };
+
   return (
     <div className="App">
-      <Row Title="Trending Movies" fetchApi={Api.fetchTrending} isLarge={true}/>
-      <Row Title="Netflix Originals" fetchApi={Api.fetchNetflixOriginals} isLarge={false} />
-      <Row Title="Top Rated" fetchApi={Api.fetchTopRated} isLarge={false}/>
-      <Row Title="Action Movies" fetchApi={Api.fetchActionMovies} isLarge={false}/>
-      <Row Title="Comedy Movies" fetchApi={Api.fetchComedyMovies} isLarge={false}/>
-       <Row Title="Horror Movies" fetchApi={Api.fetchHorrorMovies} isLarge={false}/>
-       <Row Title="Romance Movies" fetchApi={Api.fetchRomanceMovies} isLarge={false}/>
-       <Row Title="Documentaries Movies" fetchApi={Api.fetchDocumentaries} isLarge={false}/>
+      <NavBar />
+      <Banner fetchApi={requests.fetchTrending} />
+      <ModalComponent
+        isModal={isModal}
+        closeModal={closeModal}
+        modalId={modalId}
+      />
+      <Row
+        Title="Trending Movies"
+        fetchApi={requests.fetchTrending}
+        isLarge={true}
+        openModal={openModal}
+      />
+      <Row
+        Title="Netflix Originals"
+        fetchApi={requests.fetchNetflixOriginals}
+        isLarge={false}
+        openModal={openModal}
+      />
+      <Row
+        Title="Top Rated"
+        fetchApi={requests.fetchTopRated}
+        isLarge={false}
+        openModal={openModal}
+      />
+      <Row
+        Title="Action Movies"
+        fetchApi={requests.fetchActionMovies}
+        isLarge={false}
+        openModal={openModal}
+      />
+      <Row
+        Title="Comedy Movies"
+        fetchApi={requests.fetchComedyMovies}
+        isLarge={false}
+        openModal={openModal}
+      />
+      <Row
+        Title="Horror Movies"
+        fetchApi={requests.fetchHorrorMovies}
+        isLarge={false}
+        openModal={openModal}
+      />
+      <Row
+        Title="Romance Movies"
+        fetchApi={requests.fetchRomanceMovies}
+        isLarge={false}
+        openModal={openModal}
+      />
+      <Row
+        Title="Documentaries Movies"
+        fetchApi={requests.fetchDocumentaries}
+        isLarge={false}
+        openModal={openModal}
+      />
     </div>
   );
 }
